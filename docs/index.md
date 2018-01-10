@@ -5,9 +5,11 @@ IT maintenance and operation libs in Python.
 
 - lib in Python
 
-Tutorial: [https://github.com/webji/pyops/tree/master/docs/tutorial](https://github.com/webji/pyops/tree/master/docs/tutorial)
-Documentation: [https://github.com/webji/pyops/tree/master/docs](https://github.com/webji/pyops/tree/master/docs)
-Release notes:
+
+Tutorial: [tutorial](tutorial)
+Documentation: [docs](index)
+FAQ: [faq](faq)
+Release notes: []()
 
 Sample
 -------

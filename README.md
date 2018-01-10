@@ -9,6 +9,17 @@ Tutorial:
 Documentation:
 Release notes:
 
+Install
+-------
+Install from source code
+``` bash
+python setup.py install
+```
+
+Install from pypi
+``` bash
+pip install pyops
+```
 Sample
 -------
 

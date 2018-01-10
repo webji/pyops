@@ -5,6 +5,11 @@ repo_url: https://github.com/webji/pyops
 pages:
 - Introduction: index.md
 - Frequently Asked Questions: faq.md
-
+- Tutorial:
+  - Index: tutorial/index.md
+  - 'Tutorial 1: Environment Setup': tutorial/environment_setup.md
+  - 'Tutorial 2: Get OS Information': tutorial/get_os_information.md
+  - 'Tutorial 3: Modulized OS Information': tutorial/modulized_os_information.md
+  - 'Tutorial 4: OOP OS Information': tutorial/oop_os_information.md
 theme: readthedocs
 markdown_extensions: ['toc(permalink=true)', ]
