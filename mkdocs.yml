@@ -1,0 +1,10 @@
+site_name: pyops
+site_description: IT maintenance and operation libs in Python.
+site_author: webji
+repo_url: https://github.com/webji/pyops
+pages:
+- Introduction: index.md
+- Frequently Asked Questions: faq.md
+
+theme: readthedocs
+markdown_extensions: ['toc(permalink=true)', ]
