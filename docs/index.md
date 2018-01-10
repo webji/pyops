@@ -6,7 +6,7 @@ IT maintenance and operation libs in Python.
 - lib in Python
 
 
-Tutorial: [tutorial](tutorial)
+Tutorial: [tutorial](tutorial/index)
 Documentation: [docs](index)
 FAQ: [faq](faq)
 Release notes: []()
