@@ -22,7 +22,8 @@ Licensed under the Apache License, Version 2.0
 
 [Build Status]:         https://img.shields.io/travis/webji/pyops/master.svg?style=flat
 [Travis CI]:            https://travis-ci.org/webji/pyops
-[Coverage Status]:      https://img.shields.io/coveralls/webji/pyops.svg?branch=master&style=flat
-[Coverage]:             https://coveralls.io/r/webji/pyops
+[Coverage Status]:      https://coveralls.io/repos/github/webji/pyops/badge.svg?branch=master&style=flat
+[Coverage]:             https://coveralls.io/github/webji/pyops
 [Try]:                  https://img.shields.io/badge/try-pyops-blue.svg?style=flat
 [Issue]:                https://github.com/webji/pyops/issues
+
