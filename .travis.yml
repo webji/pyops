@@ -1,22 +1,21 @@
 sudo: required
 language: python
-cache: pip
 python:
     - "2.7"
-services:
 addons:
+cache: pip
+services:
 before_install:
-    - sudo apt-get update -qq
-    - sudo apt-get install -y beanstalkd
-    - echo "START=yes" | sudo tee -a /etc/default/beanstalkd > /dev/null
-    - sudo service beanstalkd start
-    - curl -O https://download.elastic.co/elasticsearch/release/org/elasticsearch/distribution/deb/elasticsearch/2.4.0/elasticsearch-2.4.0.deb && sudo dpkg -i --force-confnew elasticsearch-2.4.0.deb && sudo service elasticsearch restart
-    - sudo docker pull scrapinghub/splash
-    - sudo docker run -d --net=host scrapinghub/splash
-before_script:
+    - sudp apt-get update
 install:
+before_script:
+    - python setup.py install
 script:
-    - coverage run setup.py test
+    - python setup.py test
+before_cache:
 after_success:
-    - coverage combine
-    - coveralls
+after_failure:
+before_deploy:
+deploy:
+after_deploy:
+after_script:
