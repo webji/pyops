@@ -33,7 +33,7 @@ class OS_CI(object):
 
         for result in results:
             (d_type, d_value) = result.split(':\t')
-            lsb_dict[d_type] = d_value.strip()
+            lsb_dict[d_type.strip()] = d_value.strip()
 
         self.version = lsb_dict.get('Description', 'UNKOWN')
         self.dist_codename = lsb_dict.get('Codename', 'UNKOWN')

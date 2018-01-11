@@ -15,7 +15,7 @@ def get_os_info():
 
     for result in results:
         (d_type, d_value) = result.split(':\t')
-        lsb_dict[d_type] = d_value.strip()
+        lsb_dict[d_type.strip()] = d_value.strip()
     
     return lsb_dict
 

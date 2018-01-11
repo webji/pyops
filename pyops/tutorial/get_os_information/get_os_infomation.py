@@ -14,7 +14,7 @@ lsb_dict = defaultdict()
 
 for result in results:
     (d_type, d_value) = result.split(':\t')
-    lsb_dict[d_type] = d_value.strip()
+    lsb_dict[d_type.strip()] = d_value.strip()
 
 # print lsb_dict
 for key in lsb_dict:
