@@ -16,10 +16,10 @@ from libs.os_info import OS_CI
 def cli(ctx, **kwargs):
     
     if kwargs['fs']:
-        print 'fs'
+        print 'fs information'
 
     if kwargs['disk']:
-        print 'disk'
+        print 'disk information'
 
     return ctx
 
