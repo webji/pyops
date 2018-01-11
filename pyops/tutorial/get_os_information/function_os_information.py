@@ -16,14 +16,15 @@ def get_os_info():
     for result in results:
         (d_type, d_value) = result.split(':\t')
         lsb_dict[d_type.strip()] = d_value.strip()
-    
+
     return lsb_dict
 
 
-
+def display_os_info(lsb_dict):
     # print lsb_dict
     for key in lsb_dict:
         print '{} \t -- \t : {}'.format(key, lsb_dict[key])
 
 if __name__ == '__main__':
-    get_os_info()
+    values = get_os_info()
+    display_os_info(values)

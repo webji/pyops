@@ -26,4 +26,5 @@ def display_os_info(lsb_dict):
         print '{} \t -- \t : {}'.format(key, lsb_dict[key])
 
 if __name__ == '__main__':
-    get_os_info()
+    values = get_os_info()
+    display_os_info(values)

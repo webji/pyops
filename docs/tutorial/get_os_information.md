@@ -21,6 +21,7 @@ Try with IPython
 ----------------
 
 - Enter ipython env
+
 ``` bash
 ~$ ipython
 Python 2.7.12 (default, Nov 20 2017, 18:23:56)
@@ -35,7 +36,8 @@ object?   -> Details about 'object', use 'object??' for extra details.
 In [1]:
 ``` 
 
-- Excute the bash command
+Excute the bash command
+-----------------------
 
 ``` bash
 In [1]: lsb_release -a
@@ -70,7 +72,8 @@ In [6]: print command
 
 Here we use pip line to simulate the bash execution, and result is redirect to the stream type as file. 
 
-- Retrieve the results
+Retrieve the results
+--------------------
 
 As the output is a file, so we can read lines of the file to get the result.
 
@@ -84,7 +87,8 @@ In [10]: print results
 ['Distributor ID:\tUbuntu\n', 'Description:\tUbuntu 16.04.3 LTS\n', 'Release:\t16.04\n', 'Codename:\txenial\n']
 ```
 
-- Iter the results
+Iter the results
+----------------
 
 The result is embraced in a list, we have to iterate to the target and erase the noise.
 
@@ -102,14 +106,15 @@ In [18]: dist_release_line = results[2]
 In [19]: print dist_release_line
 Release:        16.04
 ```
-- Digest the value
+
+Digest the value
+----------------
 
 Now we got the target line as a string 'Release:        16.04', but the '16.04' is what we really wanted. 
 
 As people always says that every roads lead to Roma, there are many way to achive the goal, and here we will show 2 of them.
 
-- Digest with regex
-One way to get information from string is to use regex to match the target.
+- One way to get information from string is to use regex to match the target.
 
 ``` bash
 In [21]: import re
@@ -135,8 +140,7 @@ In [28]: print dist_release_value
 In [29]: type(dist_release_value)
 Out[29]: <type 'str'>
 ```
-- Digest with split
-Another one is split the string into a list the get the target index.
+- Another one is split the string into a list the get the target index.
 
 ``` bash
 In [30]: (dist_release_type, dist_release_value) = dist_release_line.split()
@@ -148,7 +152,8 @@ In [32]: type(dist_release_value)
 Out[32]: <type 'str'>
 ```
 
-- Convert the type
+Convert the type
+----------------
 
 What we got now is a string, but we want some number values.
 
@@ -162,7 +167,8 @@ In [35]: type(release_number)
 Out[35]: <type 'float'>
 ```
 
-- Get all the value
+Get all the value
+-----------------
 
 Not only the release number, but all the values are useful, and we want to keep them and will be used in the future.
 
@@ -214,7 +220,8 @@ Ubuntu 16.04.3 LTS
 ```
 
 
-- Summary the process
+Summary the process
+-------------------
 
 The interactive way is useful for developers but we can't use it for programing. Luckily that, ipython provids a good direct to list all the history, '%hist' or '%history'
 
@@ -266,7 +273,8 @@ print lsb_dict['Description']
 %hist
 ```
 
-- Generate the python code
+Generate the python code
+------------------------
 
 ``` python
 #!/usr/bin/env python
@@ -291,3 +299,50 @@ for key in lsb_dict:
     print '{} \t -- \t : {}'.format(key, lsb_dict[key])
 
 ```
+
+Source code refers to [get_os_information.py](https://github.com/webji/pyops/blob/master/pyops/tutorial/get_os_information/get_os_infomation.py).
+
+Organize in functions
+----------------------
+
+As you see the code is quite easy and simple. But is just goes from top to bottom without any stop and logic paths. We need organize.
+
+The process is seperated into two phases:
+- Execute the command and got the result map
+- Print the result map
+
+``` python
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+# Author: Will<willji@outlook.com>
+# Created on 2018-01-10 19:49:12
+
+import os
+from collections import defaultdict
+
+def get_os_info():
+
+    command = os.popen('lsb_release -a')
+    results = command.readlines()
+
+    lsb_dict = defaultdict()
+
+    for result in results:
+        (d_type, d_value) = result.split(':\t')
+        lsb_dict[d_type.strip()] = d_value.strip()
+
+    return lsb_dict
+
+
+def display_os_info(lsb_dict):
+    # print lsb_dict
+    for key in lsb_dict:
+        print '{} \t -- \t : {}'.format(key, lsb_dict[key])
+
+if __name__ == '__main__':
+    values = get_os_info()
+    display_os_info(values)
+
+```
+
+Source code refers to [function_os_information.py](https://github.com/webji/pyops/blob/master/pyops/tutorial/get_os_information/function_os_information.py) as the source code.

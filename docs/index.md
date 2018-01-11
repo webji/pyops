@@ -3,13 +3,16 @@ pyops - python for opration
 
 IT maintenance and operation libs in Python.
 
-- lib in Python
 
 
-Tutorial: [tutorial](tutorial/index)
+Tutorial: [tutorial](tutorial/index) - This tutorial is aimed for those who are 0 based python backgrounds. 
+
 Documentation: [docs](index)
+
 FAQ: [faq](faq)
+
 Release notes: []()
+
 
 Sample
 -------
