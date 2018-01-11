@@ -23,7 +23,7 @@ pip 9.0.1 from /home/cesbd/.local/lib/python2.7/site-packages (python 2.7)
 
 IPython Playground
 ------------------
-IPython is a good start to play with python expressions and directives:
+[IPython](http://ipython.org/) is a good start to play with python expressions and directives:
 
 ``` bash
 ~$ ipython
@@ -47,11 +47,10 @@ In []: print os.defpath
 VSCode
 ------
 Many fantastic editors and IDEs for python
-  - PyCharm
-  - SublimText
-  - Atom
-  - Eclipse
-  - VSCode
+  - [PyCharm](https://www.jetbrains.com/pycharm/) - JetBrains product - Commercial
+  - [Sublim Text 3](https://www.sublimetext.com/3) - Open Source
+  - [Atom](https://atom.io/) - js based
+  - [VSCode](https://code.visualstudio.com) - Microsoft product - Open Source
   - UltraEdit
   - Notepad++
  

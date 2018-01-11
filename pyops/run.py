@@ -15,9 +15,6 @@ import pyops
 
 @click.group(invoke_without_command=True)
 @click.option('--logging-config', default=os.path.join(os.path.dirname(__file__), 'logging.conf'), help='logging conifig file for built-in python logging module', show_default=True)
-@click.option('--os', default=False, is_flag=True, help='display os information ', show_default=True)
-@click.option('--fs', default=False, is_flag=True, help='display fs information', show_default=True)
-@click.option('--disk', default=False, is_flag=True, help='display disk information', show_default=True)
 @click.version_option(version=pyops.__version__, prog_name=pyops.__name__)
 @click.pass_context
 def cli(ctx, **kwargs):
@@ -34,7 +31,35 @@ def os(ctx, os_dist, os_version):
 
 @cli.command()
 @click.option('--type', default=False, is_flag=True, help='display fs type', show_default=True)
+@click.pass_context
 def fs(ctx):
+    pass
+
+@cli.command()
+@click.option('--all', default=False, is_flag=True, help='display all disk information', show_default=True)
+@click.pass_context
+def disk(ctx):
+    pass
+
+
+@cli.command()
+@click.pass_context
+def network(ctx):
+    pass
+
+@cli.command()
+@click.pass_context
+def memory(ctx):
+    pass
+
+@cli.command()
+@click.pass_context
+def cpu(ctx):
+    pass
+
+@cli.command()
+@click.pass_context
+def db(ctx):
     pass
 
 def main():

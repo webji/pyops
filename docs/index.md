@@ -5,19 +5,25 @@ IT maintenance and operation libs in Python.
 
 
 
-Tutorial: [tutorial](tutorial/index) - This tutorial is aimed for those who are 0 based python backgrounds. 
+Tutorial
+--------
+ [tutorial](tutorial/index) 
+ - This tutorial is aimed for those who are 0 based python backgrounds. 
 
-Documentation: [docs](index)
+Documentation
+-------------
+[docs](index)
 
-FAQ: [faq](faq)
 
-Release notes: []()
+FAQ
+---
+[faq](faq)
 
+Release notes
+-------------
 
 Sample
 -------
-
-
 
 
 License
