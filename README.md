@@ -32,12 +32,12 @@ Tutorial
 
 Documentation
 -------------
-[docs](https://github.com/webji/pyops)
+[docs](https://github.com/webji/pyops/index)
 
 
 FAQ
 ---
-[faq](faq)
+[faq](https://webji.github.io/pyops/faq)
 
 Release notes
 -------------
