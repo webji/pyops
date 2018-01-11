@@ -5,6 +5,7 @@
 
 import test_info
 
+import test_info
 # values = info.get_os_info()
 # info.display_os_info(values)
 

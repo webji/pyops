@@ -109,6 +109,35 @@ Distributor ID   --      : Ubuntu
 Description      --      : Ubuntu 16.04.3 LTS
 ```
 
+Import will run the code from the module, the first time imported.
+
+``` bash
+~$ code test_test_info.py
+```
+
+with the code:
+
+``` python
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+# Author: Will<willji@outlook.com>
+# Created on 2018-01-11 11:18:12
+
+import test_info
+
+import test_info
+```
+
+``` bash
+$ python test_test_info.py
+Release          --      : 16.04
+Codename         --      : xenial
+Distributor ID   --      : Ubuntu
+Description      --      : Ubuntu 16.04.3 LTS
+```
+
+The test_info.py is excuted the first time imported.
+
 Every thing goes well, we got what we expected.
 
 But it is too simple, maybe too naive?
@@ -177,7 +206,6 @@ Tips
   - when imported, the value is the module name, as 'os_info'
   - when excuted by python directly, the value is '__main__'
   - That's why we have "if \_\_name\_\_ == \'\_\_main\_\_\'" code in modules
-
 
 
 Source code refers to [modulized_os_information](https://github.com/webji/pyops/tree/master/pyops/tutorial/modulized_os_information).
